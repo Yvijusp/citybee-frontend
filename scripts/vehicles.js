@@ -28,7 +28,7 @@ const displayVehicles = () => {
                 a += `
             <td class='text-center col-3'>${v.model_id.name}</td>
             <td class='text-center col-3'>${v.number_plate}</td>
-            <td class='text-center col-3'>${v.country_location}</td>
+            <td class='text-center col-3'>${v.country_location.toUpperCase()}</td>
             <td class='text-center col-3'>${(
               v.model_id.hour_price * 1.21
             ).toFixed(2)}€</td>
