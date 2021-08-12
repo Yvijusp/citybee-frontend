@@ -8,7 +8,7 @@ let filter = '';
 
 // Functions
 const displayVehicles = () => {
-  fetch('http://localhost:5000/vehicles/' + filter)
+  fetch('https://citybee-app.herokuapp.com/vehicles/' + filter)
     .then((response) => response.json())
     .then((result) => {
       vehicles.innerHTML = `

@@ -5,7 +5,7 @@ const modelsCount = document.querySelector('#modelscount');
 
 // Functions
 const displayModels = () => {
-  fetch('http://localhost:5000/models')
+  fetch('https://citybee-app.herokuapp.com/models')
     .then((response) => response.json())
     .then((result) => {
       models.innerHTML = `
@@ -34,7 +34,7 @@ const displayModels = () => {
 };
 
 const displayModelCount = () => {
-  fetch('http://localhost:5000/modelscount')
+  fetch('https://citybee-app.herokuapp.com/modelscount')
     .then((response) => response.json())
     .then((result) => {
       modelsCount.innerHTML = `

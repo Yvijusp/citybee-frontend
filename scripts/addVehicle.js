@@ -6,7 +6,7 @@ const outputElement = document.querySelector('#output');
 
 // Functions
 const createModelsSelectElement = () => {
-  fetch('http://localhost:5000/models')
+  fetch('https://citybee-app.herokuapp.com/models')
     .then((response) => response.json())
     .then((result) => {
       modelSelectElement.innerHTML = ` <label for="select">Model Select</label>
@@ -46,7 +46,7 @@ formElement.addEventListener('submit', (e) => {
     country_location: e.target.elements['country_location'].value,
   };
 
-  fetch('http://localhost:5000/vehicles/add/' + model_id, {
+  fetch('https://citybee-app.herokuapp.com/vehicles/add/' + model_id, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

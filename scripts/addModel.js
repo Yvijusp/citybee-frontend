@@ -20,7 +20,7 @@ formElement.addEventListener('submit', (e) => {
     hour_price: +e.target.elements.price.value,
   };
 
-  fetch('http://localhost:5000/models', {
+  fetch('https://citybee-app.herokuapp.com/models', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
