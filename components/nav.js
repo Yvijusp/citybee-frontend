@@ -18,7 +18,7 @@ const displayNavbar = () => {
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav  mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="${
+          <a class="nav-link" aria-current="page" href="${
             location.pathname.includes('views')
               ? '../index.html'
               : './index.html'
@@ -39,7 +39,7 @@ const displayNavbar = () => {
           }">Vehicles</a>
         </li>
          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Admin
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -61,6 +61,29 @@ const displayNavbar = () => {
   </div>
 </nav>
   `;
+
+  const navLink = document.querySelectorAll('.nav-link');
+
+  navLink.forEach((link) => {
+    if (location.pathname.includes('index.html')) {
+      if (link.href.includes('index.html')) return link.classList.add('active');
+    }
+    if (location.pathname.includes('models.html')) {
+      if (link.href.includes('models.html'))
+        return link.classList.add('active');
+    }
+    if (location.pathname.includes('vehicles.html')) {
+      if (link.href.includes('vehicles.html'))
+        return link.classList.add('active');
+    }
+    if (
+      location.pathname.includes('addModel.html') ||
+      location.pathname.includes('addVehicle.html')
+    ) {
+      if (link.classList.contains('dropdown-toggle'))
+        return link.classList.add('active');
+    }
+  });
 };
 
 // Events

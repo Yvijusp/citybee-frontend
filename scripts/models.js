@@ -18,15 +18,15 @@ const displayModels = () => {
           </tr>
         </thead>
         <tbody>
-          <tr class='row justify-content-center'>
-              ${result.reduce((a, v) => {
-                a += `
-            <td class='text-center col-5'>${v.name}</td>
-            <td class='text-center col-5'>${v.hour_price}€</td>            
+          ${result.reduce((a, v) => {
+            a += `
+              <tr class='row justify-content-center'>
+                <td class='text-center col-5'>${v.name}</td>
+                <td class='text-center col-5'>${v.hour_price}€</td> 
+              </tr>           
             `;
-                return a;
-              }, '')}
-          </tr>
+            return a;
+          }, '')}
         </tbody>
       </table>
       `;
@@ -47,15 +47,15 @@ const displayModelCount = () => {
           </tr>
         </thead>
         <tbody>
-          <tr class='row justify-content-center'>
           ${result.reduce((a, v) => {
             a += `
-            <td class='text-center col-5'>${v.model}</td>
-            <td class='text-center col-5'>${v.vehicleCount}</td>            
+            <tr class='row justify-content-center'>
+              <td class='text-center col-5'>${v.model}</td>
+              <td class='text-center col-5'>${v.vehicleCount}</td>  
+            </tr>          
             `;
             return a;
           }, '')}
-          </tr>
         </tbody>
       </table>
       `;
