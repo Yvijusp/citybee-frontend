@@ -77,8 +77,8 @@ const displayNavbar = () => {
         return link.classList.add('active');
     }
     if (
-      location.pathname.includes('addModel') ||
-      location.pathname.includes('addVehicle')
+      location.pathname.includes('addmodel') ||
+      location.pathname.includes('addvehicle')
     ) {
       if (link.classList.contains('dropdown-toggle'))
         return link.classList.add('active');
